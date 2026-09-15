@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+.nf-section {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #080a0f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Cyber Background Grid */
+.cyber-grid {
+  position: absolute;
+  inset: 0;
+  background-size: 60px 60px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  mask-image: radial-gradient(circle at center, black 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 80%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Glowing Ambient Orbs */
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.orb-primary {
+  width: 450px;
+  height: 450px;
+  background: rgba(124, 108, 255, 0.18);
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.orb-secondary {
+  width: 300px;
+  height: 300px;
+  background: rgba(124, 108, 255, 0.08);
+  bottom: 10%;
+  right: 15%;
+}
+
+/* Layout Container */
+.nf-container {
+  max-width: 760px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Studio Branding */
+.nf-brand {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: #8b92a5;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.brand-accent {
+  color: #7c6cff;
+}
+
+/* Visual 404 Hero Portal Display */
+.nf-hero-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  user-select: none;
+}
+
+.nf-digit {
+  font-size: 130px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -4px;
+  background: linear-gradient(180deg, #ffffff 40%, rgba(255, 255, 255, 0.15) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Portal Rings replacing middle 0 */
+.nf-zero-portal {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.portal-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid rgba(124, 108, 255, 0.5);
+  box-shadow: 0 0 25px rgba(124, 108, 255, 0.4), inset 0 0 25px rgba(124, 108, 255, 0.3);
+  animation: pulsePortal 3s infinite ease-in-out;
+}
+
+.portal-core {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #7c6cff;
+  box-shadow: 0 0 20px #7c6cff;
+}
+
+@keyframes pulsePortal {
+  0%, 100% {
+    transform: scale(1);
+    border-color: rgba(124, 108, 255, 0.5);
+  }
+  50% {
+    transform: scale(1.1);
+    border-color: rgba(124, 108, 255, 0.9);
+    box-shadow: 0 0 35px rgba(124, 108, 255, 0.7), inset 0 0 35px rgba(124, 108, 255, 0.5);
+  }
+}
+
+/* Glassmorphic Badge */
+.nf-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 20px;
+  background: rgba(17, 20, 29, 0.7);
+  border: 1px solid rgba(124, 108, 255, 0.25);
+  backdrop-filter: blur(16px);
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: #d1d5db;
+  margin-bottom: 28px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.status-pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.status-pulse.online {
+  background-color: #7c6cff;
+  box-shadow: 0 0 10px #7c6cff;
+}
+
+.status-pulse.offline {
+  background-color: #ff4d4d;
+  box-shadow: 0 0 10px #ff4d4d;
+}
+
+/* Dynamic Typography */
+.nf-title {
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -1.2px;
+  margin: 0 0 18px 0;
+  color: #ffffff;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #7c6cff 0%, #b8adff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nf-subtext {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #8b92a5;
+  margin: 0 0 40px 0;
+  max-width: 540px;
+}
+
+/* Action Buttons */
+.nf-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nf-btn {
+  padding: 16px 36px;
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-icon {
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.primary-btn {
+  background: #7c6cff;
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(124, 108, 255, 0.35);
+}
+
+.primary-btn:hover {
+  background-color: #6b5bea;
+  transform: translateY(-3px);
+  box-shadow: 0 14px 40px rgba(124, 108, 255, 0.55);
+}
+
+.primary-btn:hover .btn-icon {
+  transform: translateX(-4px);
+}
+
+.secondary-btn {
+  background: rgba(17, 20, 29, 0.8);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.secondary-btn:hover {
+  border-color: rgba(124, 108, 255, 0.4);
+  transform: translateY(-3px);
+  background: rgba(22, 26, 38, 0.9);
+}
+
+.secondary-btn:hover .btn-icon {
+  transform: rotate(180deg);
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+  .nf-digit {
+    font-size: 80px;
+  }
+
+  .nf-zero-portal {
+    width: 55px;
+    height: 55px;
+  }
+
+  .portal-core {
+    width: 20px;
+    height: 20px;
+  }
+
+  .nf-title {
+    font-size: 28px;
+  }
+
+  .nf-subtext {
+    font-size: 13.5px;
+  }
+
+  .nf-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .nf-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

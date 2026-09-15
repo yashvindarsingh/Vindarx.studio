@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Lenis Smooth Scroll Essential CSS */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* Global Reset & Base Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #080a0f;
+  color-scheme: dark;
+}
+
+body {
+  background-color: #080a0f;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar for Desktop */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080a0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1a1e2d;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7c6cff;
+}
+
+/* Global Responsive Container Rules */
+@media (max-width: 1200px) {
+  .team-container,
+  .why-container,
+  .testimonial-container,
+  .cta-container,
+  .footer-container,
+  .about-container,
+  .stats-container,
+  .service-container,
+  .work-top {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+}
+
+/* Tablet Responsiveness */
+@media (max-width: 900px) {
+  h1,
+  .about-title {
+    font-size: 36px !important;
+  }
+
+  h2,
+  .why-heading,
+  .cta-title,
+  .team-title-block h2 {
+    font-size: 30px !important;
+  }
+
+  .testimonial-quote {
+    font-size: 26px !important;
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  section {
+    padding: 60px 0 !important;
+  }
+
+  h1,
+  .about-title {
+    font-size: 28px !important;
+  }
+
+  h2,
+  .why-heading,
+  .cta-title,
+  .team-title-block h2 {
+    font-size: 24px !important;
+  }
+
+  .testimonial-quote {
+    font-size: 20px !important;
+  }
+
+  .cta-card {
+    padding: 40px 20px !important;
+  }
+}
