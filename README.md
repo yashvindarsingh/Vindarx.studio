@@ -1,6 +1,6 @@
 <div align="center">
 
-  # ⚡ Vindar X Studio
+  # ⚡ Vindarx.studio
   **A Modern Digital Product & IT Solutions Studio**
 
   [![React](https://img.shields.io/badge/React-18.x-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
